@@ -86,6 +86,7 @@
 								<p style="text-align: justify">Feel free to browse through the projects on which I have contributed and created myself.</p>
 								<span class="image main"><a href="#totow"><img src="images/totow01.png" alt="" /><h3>Tale of the Ocean World</h3></a></span>
 								<span class="image main"><a href="#sortingAlgorithms"><img src="images/sortingAlgorithms.png"/><h3>Visualized Sorting Algorithms</h3></a></span>
+								<span class="image main"><a href="#boxJump"><img src="images/boxJump.png"/><h3>Box jump AI using NEAT</h3></a></span>
 							</article>
 
 						<!-- TOTOW -->
@@ -110,12 +111,30 @@
 								<center><li><strong>Project Type:</strong> Personal</li></center>
 								<center><li><strong>Project Duration:</strong> ~2 days</li></center>
 								<center><li><strong>Software Used:</strong> VS Code</li></center>
-								<center><li><strong>Languages/Libraries Used:</strong> JavaScript, p5.js</li></center>
+								<center><li><strong>Languages / Libraries Used:</strong> JavaScript, p5.js</li></center>
 							</ul>
 							<span class="image main"><img src="images/sortingAlgorithms.png" alt="" /></span>
 							<p style="text-align: justify">I have studied algorithms and data structures in my 3rd semester, but as time passes knowledge seems to get forgotten. Instead of creating such algorithms to use in individual projects, programmers tend to use pre-existing libraries with these algorithms already implemented. When I started learning JavaScript, I wanted to make sure I haven't forgotten about these algorithms and applied them in a small project. </p>
 							<p>I have implemented three sorting algorithms: Bubble sort, heap sort, and quick sort. The application starts with one unsorted array and depending on the algorithm you choose to use, the array will begin to visually get sorted.</p>
 							<p>You can check out the project by clicking <a href="sortingAlgorithms/SortingAlgorithms_index.html">HERE</a></p>
+						</article>
+
+						<!-- BOX JUMP MACHINE LEARNING -->
+						<article id="boxJump">
+							<center><h2 class="major">Box jump AI using NEAT</h2></center>
+							<ul class="alt">
+								<center><li><strong>Project Status:</strong>  Complete</li></center>
+								<center><li><strong>Project Type:</strong> Personal</li></center>
+								<center><li><strong>Project Duration:</strong> ~4 days</li></center>
+								<center><li><strong>Software Used:</strong> VS Code</li></center>
+								<center><li><strong>Languages / Libraries Used:</strong> JavaScript, p5.js, p5.collide2d.js</li></center>
+							</ul>
+							<span class="image main"><img src="images/boxJump.png" alt="" /></span>
+							<p style="text-align: justify">My first journey into machine learning did not begin with this project. I took a machine learning course during the 6th semester of my Bachelor studies, learning much of the basics and theory for creating neural networks, and using algorithms for the different types of machine "learning". I decided to venture off deeper into the subject and create my own AI that can tackle problems. Initially I started recreating Flappy Bird using the NEAT algorithm, but encountered countless of obstacles until the whole project was rendered useless and unable to work in any way. I messed up big time, but came out with a better understanding of the subject.</p>
+							<p style="text-align: justify">Box jump is a simple 2D game where the player/AI has to jump over incoming boxes. The boxes have a random chance to spawn in one of four different positions. After the initial stage was complete and the player could move and avoid obstacles, it was time to implement the AI.</p>
+							<p style="text-align: justify">The first task was to create the input layer from the box to the neural network. There are total of 7 inputs: x and y position of the player box and the closest enemy box, distance between the closest enemy box and the player box. The hardest part was creating the population and visualizing each individual box. After the connections were done I implemented a small function to change between training the boxes and showing the best box so far.</p>
+							<p>You can check out the project by clicking  <a href="Dino-NEAT-ML/dino_index.html"> <strong> HERE </strong> </a>.
+							<p><sub>Small bug occurs on the high score when viewing the best box.</sub></p>
 						</article>
 
 						<!-- RESUME-->
