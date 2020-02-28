@@ -25,7 +25,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Tsvetelin Dimitrov</h1>
-								<p>[Software Engineering Student] / [Indie Game Developer]</p>
+								<p>[Software Engineer] / [Indie Game Developer]</p>
 							</div>
 						</div>
 						<nav>
@@ -47,13 +47,13 @@
 							<article id="intro">
 								<h2 class="major">About Me</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p style="text-align: justify; margin-bottom:1em">Hi! I'm Tsvetelin, a game programmer and software engineering student from Bulgaria, and I've been making games since 13 and playing games from an even younger age. I published my first mobile game on Google Play in August, 2019. Currently I am in the last semester of my Software Engineering Bachelor program at <a href="https://en.via.dk/">VIA University College</a> in Denmark.</p>
+								<p style="text-align: justify; margin-bottom:1em">Hi! I'm Tsvetelin, a game programmer and a software engineer from Bulgaria, and I've been making games since 13 and playing games from an even younger age. I published my first mobile game on Google Play in August, 2019. I have finished Software Engineering Bachelor program at <a href="https://en.via.dk/">VIA University College</a> in Denmark, and currently I am developing my second game "Split Brain" since late August, 2019</p>
 								<p style="text-align: justify; margin-bottom:2em"><a href="#projects"><strong>Here</strong></a> you can see some of the projects I have had the opportunity to contribute to, and some personal projects that I have created myself.</p>
 								<h3 class="major" style="margin-bottom: 1em">Personal Information</h3>
-								<p style="text-align: justify; margin-bottom:2em">Since I was 9 years old I have never lived in a single country more than 2 consecutive years. I was born in Serbia, although my parents are Bulgarian, and have lived in Bulgaria, South Africa, The United States, Greece, Denmark, and Jordan. This has taught me to constantly adapt to changes and has led me to become more open minded and empathetic.</p>
+								<p style="text-align: justify; margin-bottom:2em">Since I was 9 years old I have never lived in a single country more than 2 consecutive years. I was born in Serbia, although my parents are Bulgarian, and have lived in Bulgaria, South Africa, The United States, Greece, Denmark, Jordan, and Austria. This has taught me to constantly adapt to changes and has led me to become more open minded and empathetic.</p>
 								<h3 class="major" style="margin-bottom: 1em">Interests</h3>
 								<ul>
-									<li>Playing 2D platformer, real-time strategy, and ﬁghting video games</li>
+									<li>Playing 2D platformers, real-time strategy, and ﬁghting video games</li>
 									<li>Playing Basketball</li>
 									<li>Watching Science-Fiction movies</li>
 									<li>Creating soundtracks</li>
@@ -67,7 +67,8 @@
 								<h2 class="major">Work</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p style="text-align: justify">I currently do not have any professional experience besides my internship during the 5th semester of my Bachelor program at <a href="https://en.via.dk/">VIA University College</a>.</p>
-								<p style="text-align: justify">I had an opportunity to begin working for a software engineering company after my internship, but decided to focus on game development and work on a personal project.</p>
+								<p style="text-align: justify">I had an opportunity to begin working for a software engineering company after my internship, but decided to focus on game development and work on personal project, as I did not believe that I was competent enough.
+																Since then, I have been reading a lot of books regarding algorithms and machine learning, and have created a few personal projects which reflect my knowledge.</p>
 								<h3>Internship</h3>
 								<ul class="alt">
 									<li><strong>Position: </strong> Software Engineering Intern</li>
@@ -87,6 +88,8 @@
 								<span class="image main"><a href="#totow"><img src="images/totow01.png" alt="" /><h3>Tale of the Ocean World</h3></a></span>
 								<span class="image main"><a href="#sortingAlgorithms"><img src="images/sortingAlgorithms.png"/><h3>Visualized Sorting Algorithms</h3></a></span>
 								<span class="image main"><a href="#boxJump"><img src="images/boxJump.png"/><h3>Box jump AI using NEAT</h3></a></span>
+								<span class="image main"><a href="#boidAlgorithm"><img src="images/flockingAlg.png"/><h3>Flocking Algorithm</h3></a></span>
+								<span class="image main"><a href="#mst_pf"><img src="images/mst_a_star.png"/><h3>Minimum Spanning Tree + A*</h3></a></span>
 							</article>
 
 						<!-- TOTOW -->
@@ -143,6 +146,47 @@
 							<p style="text-align: justify">The first task was to create the input layer from the box to the neural network. There are total of 7 inputs: x and y position of the player box and the closest enemy box, distance between the closest enemy box and the player box. The hardest part was creating the population and visualizing each individual box. After the connections were done I implemented a small function to change between training the boxes and showing the best box so far.</p>
 							<p>You can check out the project by clicking  <a href="Dino-NEAT-ML/dino_index.html"> <strong> HERE </strong> </a>.
 							<p><sub>Small bug occurs on the high score when viewing the best box.</sub></p>
+						</article>
+
+						<article id="boidAlgorithm">
+							<center><h2 class="major">Flocking Algorithm</h2></center>
+							<ul class="alt">
+								<center><li><strong>Project Status:</strong>  Complete</li></center>
+								<center><li><strong>Project Type:</strong> Personal</li></center>
+								<center><li><strong>Project Duration:</strong> ~1 days</li></center>
+								<center><li><strong>Software Used:</strong> VS Code</li></center>
+								<center><li><strong>Languages / Libraries Used:</strong> JavaScript, p5.js</li></center>
+							</ul>
+							<span class="image main"><img src="images/flockingAlg.png" alt="" /></span>
+							<p style="text-align: justify">After seeing the 1986 flocking simulation, I decided to read Craig Reynolds' (the inventor) background regarding the Boids. Thereafter I wanted to recreate it by just following the three rules: Alignment, Cohesion and Separation.</p>
+							<p style="text-align: justify">I decided to use JavaScript, because of its simplicity, and p5.js for its easy setup and visualizations. When creating the project, I decided to add a bit more physics to the algorithm, therefore I applied mass to each boid, and having the steering of that boid a bit harder due to its mass. This made the smaller boids more agile, while the larger boids very bulky.</p>
+							<p style="text-align: justify">The images below are code snippets showcasing the behavior of each rule (mentioned above) that every boid follows.</p>
+							<span class="image main"><img src="images/alignment.png" alt="" /></span>
+							<span class="image main"><img src="images/cohesion.png" alt="" /></span>
+							<span class="image main"><img src="images/separation.png" alt="" /></span>
+							<p style="text-align: justify">I am aware of the time complexity of this project, and there are many more efficient ways of improving it. One way I could think of is to put the boids in a tree so we can iterate through them faster if there are close to the main boid</p>
+							<p>You can check out the project by clicking  <a href="/FlockingAlgorithm/index.html"> <strong> HERE </strong> </a>.
+							<p><sub>There are no interactions. Just enjoy!</sub></p>
+						</article>
+
+						<article id="mst_pf">
+							<center><h2 class="major">Minimum Spanning Tree + A*</h2></center>
+							<ul class="alt">
+								<center><li><strong>Project Status:</strong>  Complete</li></center>
+								<center><li><strong>Project Type:</strong> Personal</li></center>
+								<center><li><strong>Project Duration:</strong> ~1 days</li></center>
+								<center><li><strong>Software Used:</strong> VS Code</li></center>
+								<center><li><strong>Languages / Libraries Used:</strong> JavaScript, p5.js</li></center>
+							</ul>
+							<span class="image main"><img src="images/mst_a_star.png" alt="" /></span>
+							<p style="text-align: justify">After reading the "Introduction to algorithms", by the gang of four I wanted to expand my knowledge regarding algorithms. I wanted to recreate the minimum spanning tree in a more interactable way, and then allow the user to choose a starting and ending point, and apply a path finding algorithm to the tree. </p>
+							<p>I have only implemented the A* algorithm (although not really worth it for this project), which I had a lot of troubles with. I learned a lot by trying to implemented my theoretical knowledge to practice, and I recommend anyone else who wants to learn algorithms to try and implement the algorithms that they find interesting.</p>
+							<p>You can see a snippet of the implementation for the A* algorithm below, and more precisely the formula.</p>
+							<span class="image main"><img src="images/A_star.png" alt="" /></span>
+							<p>I had to apply a heuristics function to the algorithm, and I chose the raw euclidean distance instead of the manhattan distance for example.</p>
+							<span class="image main"><img src="images/heuristicFunction.png" alt="" /></span>
+							<p>You can check out the project by clicking <a href="MST-PF/index.html">HERE</a></p>
+							<p><sub>Start by clicking on the canvas to create tree nodes. These nodes will be connected between each other with edges based on the Minimum Spanning Tree algorithm. After you have placed 20 nodes, you can click on any node to make it a <b>START</b> node. Then click on another node to make it an <b>END</b> node. Finally see the shortest path based on the A* algorithm.</sub></p>
 						</article>
 
 						<!-- RESUME-->
