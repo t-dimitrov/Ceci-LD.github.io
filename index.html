@@ -90,6 +90,7 @@
 								<span class="image main"><a href="#boxJump"><img src="images/boxJump.png"/><h3>Box jump AI using NEAT</h3></a></span>
 								<span class="image main"><a href="#boidAlgorithm"><img src="images/flockingAlg.png"/><h3>Flocking Algorithm</h3></a></span>
 								<span class="image main"><a href="#mst_pf"><img src="images/mst_a_star.png"/><h3>Minimum Spanning Tree + A*</h3></a></span>
+								<span class="image main"><a href="#cpp_astar"><img src="cpp-A-star/A_star_image.png"/><h3>A* Visualization with SFML</h3></a></span>
 							</article>
 
 						<!-- TOTOW -->
@@ -148,6 +149,7 @@
 							<p><sub>Small bug occurs on the high score when viewing the best box.</sub></p>
 						</article>
 
+						<!-- BOID ALGORITHM -->	
 						<article id="boidAlgorithm">
 							<center><h2 class="major">Flocking Algorithm</h2></center>
 							<ul class="alt">
@@ -169,6 +171,7 @@
 							<p><sub>There are no interactions. Just enjoy!</sub></p>
 						</article>
 
+						<!-- MINIMUM SPANNING TREE + A* -->
 						<article id="mst_pf">
 							<center><h2 class="major">Minimum Spanning Tree + A*</h2></center>
 							<ul class="alt">
@@ -187,6 +190,47 @@
 							<span class="image main"><img src="images/heuristicFunction.png" alt="" /></span>
 							<p>You can check out the project by clicking <a href="MST-PF/index.html">HERE</a></p>
 							<p><sub>Start by clicking on the canvas to create tree nodes. These nodes will be connected between each other with edges based on the Minimum Spanning Tree algorithm. After you have placed 20 nodes, you can click on any node to make it a <b>START</b> node. Then click on another node to make it an <b>END</b> node. Finally see the shortest path based on the A* algorithm.</sub></p>
+						</article>
+
+						<!-- A* IN CPP -->
+						<article id="cpp_astar">
+							<center><h2 class="major">Visualizing A* with SFML</h2></center>
+							<ul class="alt">
+								<center><li><strong>Project Status:</strong>  Complete</li></center>
+								<center><li><strong>Project Type:</strong> Personal</li></center>
+								<center><li><strong>Project Duration:</strong> ~3 days</li></center>
+								<center><li><strong>Software Used:</strong> Codeblocks</li></center>
+								<center><li><strong>Languages / Libraries Used:</strong> C++,  SFML</li></center>
+								<span class="image main"><img src="cpp-A-star/A_star_image.png" alt="" /></span>
+							</ul>
+							<p style="text-align: justify">I began my journey into algorithms as any software engineer would. Through watching youtube videos. I was amazed by the sheer number of cool things people could make using algorithms. A few weeks before this project I picked up the "Introduction to algorithms", by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein, and the "Algorithm Design Manual" by Skiena.
+							There were so many algorithms that I knew from my Bachelors education, but on the other hand there were also so many that I had never heard about. I dived deeper and deeper into pathfinding algorithms as that piqued my interest.</p>
+							<p>To implement the A* algorithm I decided that I needed a language that is very efficient when dealing with computational power, therefore I picked c++. I also needed a way to visualize everything since its pretty boring seeing your console line outputting this:</p>
+							<p>
+								<code>
+									Starting Node = {0, 0} </br>
+									Target Node   = {99, 99} </br>
+									Algorithm Starting... </br>
+									Computing shortest path... </br>
+									Shortest path found!
+								</code>
+							</p>
+							<p>For the graphics I chose to use the SFML library as it is easy to pick up, and I was satisfied with having 2d graphics, as I only needed to represent a 2D grid.</p>
+
+							<p>The hardest part was fiquring out how to implement the algorithm in c++, since I am new to the language and there are many simple things I did not know. For example in Java I could use a List for the Open and Closed sets, and since the list has methods already implemented for finding if an element is in the list (Contains) and remove, the algorithm would be way easier to implement.</p>
+							<p>Another obstacle I ran into was optimization. By using a normal array (vector) in c++, finding the node with the lowest f cost was very time consuming. I had to implement a min heap to avoid this overhead and that's when other problems occured. I am relatively new to using pointers, and using them efficiently is another task. In the end through trial and error I managed to make the algorithm work by replacing the Open and Closed set with a min heap.</p>
+							<span class="image main"><img src="cpp-A-star/minHeap_replacced.png" alt="" />Code before and after min heap implementation</span>
+							<p>I decided to track how much time it would take to run each algorithm (with min heap and without) by using a timer. I implemented a Timer class by following <a href="https://www.youtube.com/watch?v=YG4jexlSAjc"> this </a> tutorial.</p>
+
+							<span class="image main"><img src="cpp-A-star/1000x1000.png" alt="" />1000x1000 grid</span>
+							<p><b>RESULTS in a 20x20 grid without obstacles</b></br>
+							Without Heap: ~1.2 ms</br>
+							With Heap: ~0.0 ms</p>
+
+							<p><b>RESULTS in a 1000x1000 grid</b></br>
+							Without Heap: <i>Program didn't respond</i></br>
+							With Heap: ~1116 ms</p>
+							<p>If you would like to check out the spaghetti code for this project go to my <a href="https://github.com/Ceci-LD/cpp_a_star">Github Repository</a></p>
 						</article>
 
 						<!-- RESUME-->
