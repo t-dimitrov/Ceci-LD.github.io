@@ -65,10 +65,6 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p style="text-align: justify">I currently do not have any professional experience besides my internship during the 5th semester of my Bachelor program at <a href="https://en.via.dk/">VIA University College</a>.</p>
-								<p style="text-align: justify">I had an opportunity to begin working for a software engineering company after my internship, but decided to focus on game development and work on personal project, as I did not believe that I was competent enough.
-																Since then, I have been reading a lot of books regarding algorithms and machine learning, and have created a few personal projects which reflect my knowledge.</p>
 								<h3>Internship</h3>
 								<ul class="alt">
 									<li><strong>Position: </strong> Software Engineering Intern</li>
@@ -76,21 +72,26 @@
 									<li><strong>Place: </strong> Amman, Jordan</li>
 									<li><strong>Period: </strong> July, 2018 - December, 2018</li>
 								</ul>
-								<p style = "text-align: justify"> VIA University College allows Software Engineering students to take an internship during their 5th semester, which is why I took the opportunity to move and work in Amman, Jordan.<br>During my internship I was in charge with executing delegated tasks from customers on time and with a high quality. I mainly focused on network security and internet protocols. I completed the internship training early and ahead of time, but decided to extend my training period for one more month. Throughout this period, I received two Sophos XG Firewall certiﬁcates, which can be found below.</p>
+								<p style = "text-align: justify">During my internship I was in charge with executing delegated tasks from customers on time and with a high quality. I mainly focused on network security and internet protocols, while also helping the front-end team with web development. I completed the internship training early and ahead of time, but decided to extend my training period for one more month. Throughout this period, I received two Sophos XG Firewall certiﬁcates, which can be found below.</p>
 								<p style="text-align: justify"> <a href="https://v6.netexam.com/certs/11017/D59A890594E14B109F3D2A030FA57A1589889.pdf">ET80 - XG Fiewall v17.0 - Engineer Certiﬁcate</a><i> - (10/2018 - Present)</i></p>
 								<p style="text-align: justify"> <a href="https://drive.google.com/file/d/1cvJuPb36cIR-VX3oDre6JncPQhT02GP6/view">S80 - XG Firewall v17.0 - Technician Certiﬁcate</a><i> - (11/2018 - Present)</i></p>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p style="text-align: justify">I currently do not have any professional experience besides my internship during the 5th semester of my Bachelor program at <a href="https://en.via.dk/">VIA University College</a>.</p>
+								<p style="text-align: justify">After my higher education I began studying the principles of game and graphics programming. I didn't think that I was qualified enough for any job at the time, therefore I pushed myself to study the things that I found most interesting.
+																Since then, I have been reading a lot of books regarding algorithms, graphics programming, game engine architecture, and machine learning, and have created a few personal projects which reflect my knowledge.</p>
 							</article>
 
 						<!-- About -->
 							<article id="projects">
 								<h2 class="major">Projects</h2>
-								<p style="text-align: justify">Feel free to browse through the projects on which I have contributed and created myself.</p>
-								<span class="image main"><a href="#totow"><img src="images/totow01.png" alt="" /><h3>Tale of the Ocean World</h3></a></span>
+								<p style="text-align: justify">Projects that I have worked on during my free time.</p>
+								<!-- <span class="image main"><a href="#totow"><img src="images/totow01.png" alt="" /><h3>Tale of the Ocean World</h3></a></span> -->
 								<span class="image main"><a href="#sortingAlgorithms"><img src="images/sortingAlgorithms.png"/><h3>Visualized Sorting Algorithms</h3></a></span>
 								<span class="image main"><a href="#boxJump"><img src="images/boxJump.png"/><h3>Box jump AI using NEAT</h3></a></span>
 								<span class="image main"><a href="#boidAlgorithm"><img src="images/flockingAlg.png"/><h3>Flocking Algorithm</h3></a></span>
 								<span class="image main"><a href="#mst_pf"><img src="images/mst_a_star.png"/><h3>Minimum Spanning Tree + A*</h3></a></span>
 								<span class="image main"><a href="#cpp_astar"><img src="cpp-A-star/A_star_image.png"/><h3>A* Visualization with SFML</h3></a></span>
+								<span class="image main"><a href="#cpp_maze"><img src="images/mazeGen.jpg"/><h3>Maze Generator</h3></a></span>
 							</article>
 
 						<!-- TOTOW -->
@@ -231,6 +232,31 @@
 							Without Heap: <i>Program didn't respond</i></br>
 							With Heap: ~1116 ms</p>
 							<p>If you would like to check out the spaghetti code for this project go to my <a href="https://github.com/Ceci-LD/cpp_a_star">Github Repository</a></p>
+						</article>
+
+
+						<!-- Maze Generator -->
+						<article id="cpp_maze">
+							<center><h2 class="major">Maze Generator</h2></center>
+							<ul class="alt">
+								<center><li><strong>Project Status:</strong>  Complete</li></center>
+								<center><li><strong>Project Type:</strong> Personal</li></center>
+								<center><li><strong>Project Duration:</strong> ~2 days</li></center>
+								<center><li><strong>Software Used:</strong> Codeblocks</li></center>
+								<center><li><strong>Languages / Libraries Used:</strong> C++, SFML</li></center>
+							</ul>
+							<span class="image main"><img src="images/mazeGen.jpg" alt="" /></span>
+							<p style="text-align: justify"></p>
+							<p>For this project I used a maze generating algorithm to draw a NxN maze. At first I thought it would be a simple task, but I encountered a couple of blockers that made me rethink the complexity of the algorithm.</p>
+							<p>The first obstacle that I encountered was random. It was literally the random number generator in c++. I noticed that rand() is not as random as one might think. Without knowing this information I thought that my algorithm wasn't working properly, but after thorough research I found new ways to make a random number generator in c++.</p>
+							<span class="image main"><img src="images/mazeRand.png" alt="" />Choosing a random neighbor</span>
+							<p>To draw the walls of the cell I decided to draw 4 individual rectangles to represent each wall (up, down, left, right). This made it easier when making the made, since in order to connect two cells together, I would just destroy the walls that are inbetween them.</p>
+							<span class="image main"><img src="images/mazeWalls.png" alt=""/>The four walls of each cell</span>
+							<p>Implementing the stack was relatively easy, since I know the data structure and have used it previously. The only confusing thing was that when calling pop(), it did not return the actual element from the stack. I had to use top() to get the element, and then call pop().</p>
+							<p>The hardest part by far was the actual visualization. I had to find a way to visualize each cell whenever it was visited, or backtracked from the stack.</p>
+							<span class="image main"><img src="images/mazeStack.png" alt="" />Popping the top most cell from the stack</span>
+							<p>You can find the source code for this project <a href="https://github.com/Ceci-LD/MazeGenerator">HERE</a></p>
+							<p>I have created an 8 minute video showcasing my process of creating the maze generator. Link is <a href="https://youtu.be/kOsPq-vhWwo">HERE</a></p>
 						</article>
 
 						<!-- RESUME-->
